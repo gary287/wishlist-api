@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shared_wish_lists, only: :show
   resources :wish_lists, except: :index do
     resources :items
   end
