@@ -1,0 +1,18 @@
+Run options: --seed 47881
+
+# Running:
+
+E
+
+Error:
+SharedWishListsControllerTest#test_should_show_shared_wish_list:
+RuntimeError: Wrapped undumpable exception for: ActionController::UrlGenerationError: No route matches {:action=>"show", :controller=>"shared_wish_lists"}, missing required keys: [:id]
+Did you mean?  shared_wish_list_path
+    test/controllers/shared_wish_lists_controller_test.rb:5:in `block in <class:SharedWishListsControllerTest>'
+
+rails test test/controllers/shared_wish_lists_controller_test.rb:4
+
+.........
+
+Finished in 0.306857s, 32.5885 runs/s, 42.3650 assertions/s.
+10 runs, 13 assertions, 0 failures, 1 errors, 0 skips

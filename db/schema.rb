@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_04_125758) do
+ActiveRecord::Schema.define(version: 2022_01_04_025758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -25,13 +25,6 @@ ActiveRecord::Schema.define(version: 2022_01_04_125758) do
     t.index ["wish_list_id"], name: "index_items_on_wish_list_id"
   end
 
-  create_table "shared_wish_lists", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "wish_list_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["wish_list_id"], name: "index_shared_wish_lists_on_wish_list_id"
-  end
-
   create_table "wish_lists", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
@@ -39,5 +32,4 @@ ActiveRecord::Schema.define(version: 2022_01_04_125758) do
   end
 
   add_foreign_key "items", "wish_lists"
-  add_foreign_key "shared_wish_lists", "wish_lists"
 end
