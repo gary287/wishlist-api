@@ -12,3 +12,4 @@ curl -X PATCH http://127.0.0.1:3000/wish_lists/daea9922-442c-4b1d-af25-d71a903a2
 curl -X DELETE http://127.0.0.1:3000/wish_lists/daea9922-442c-4b1d-af25-d71a903a20b5/items/cae1cf5b-0b46-4a7e-a2e8-268376cfc2f0 -i -H 'Accept: application/json'
 
 curl -X GET http://127.0.0.1:3000/shared_wish_lists/70946537-49fa-4cc2-a81e-28104670c252 -i -H 'Accept: application/json'
+curl -X PATCH http://127.0.0.1:3000/shared_wish_lists/70946537-49fa-4cc2-a81e-28104670c252/purchase/e4df9b5c-2320-43ce-b454-aa80b1b1b016 -i -H 'Accept: application/json'
